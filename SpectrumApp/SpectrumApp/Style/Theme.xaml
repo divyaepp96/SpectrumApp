@@ -1,0 +1,1215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="SpectrumApp.Style.Theme"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Ext="clr-namespace:SpectrumApp.Extention"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncEffectsView="clr-namespace:Syncfusion.XForms.EffectsView;assembly=Syncfusion.Core.XForms"
+    mc:Ignorable="d">
+
+    <!--#region Fonts-->
+    <OnPlatform x:Key="BlackFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik--Black.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik--Black" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="BlackItalicFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-BlackItalic.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-BlackItalic" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="BoldFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-Bold.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-Bold" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="BoldItalicFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-BoldItalic.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-BoldItalic" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="ExtraBoldFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-ExtraBold.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-ExtraBold" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="ExtraBoldItalicFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-ExtraBoldItalic.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-ExtraBoldItalic" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="ItalicFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-Italic.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-Italic" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="LightFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-Light.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-Light" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="LightItalicFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-LightItalic.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-LightItalic" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="MediumFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-Medium.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-Medium" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="MediumItalicFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-MediumItalic.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-MediumItalic" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="RegularFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-Regular.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-Regular" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="SemiBoldFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-SemiBold.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-SemiBold" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <OnPlatform x:Key="SemiBoldItalicFont" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Rubik-SemiBoldItalic.ttf#Rubik" />
+        <On Platform="iOS" Value="Rubik-SemiBoldItalic" />
+        <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />-->
+    </OnPlatform>
+
+    <!--#endregion-->
+
+
+    <!--#region UI Style-->
+
+    <Style x:Key="contentPageStyle" TargetType="NavigationPage">
+        <Setter Property="BackgroundColor" Value="#F4F4F4" />
+    </Style>
+
+
+    <Style x:Key="UsernameEntryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Email" />
+        <Setter Property="Placeholder" Value="yvenide@example.com" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="ReturnType" Value="Next" />
+    </Style>
+
+    <Style x:Key="PasswordEntryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Placeholder" Value="•••••••" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="IsPassword" Value="True" />
+        <Setter Property="ReturnType" Value="Go" />
+    </Style>
+
+    <Style x:Key="FullNameEntryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Text" />
+        <Setter Property="Placeholder" Value="Full Name" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="ReturnType" Value="Next" />
+    </Style>
+
+    <Style x:Key="PhoneEntryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Telephone" />
+        <Setter Property="MaxLength" Value="10" />
+        <Setter Property="Placeholder" Value="Phone Number" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="ReturnType" Value="Next" />
+    </Style>
+
+    <Style x:Key="EmailEntryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Email" />
+        <Setter Property="Placeholder" Value="yvenide@example.com" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="ReturnType" Value="Next" />
+    </Style>
+
+    <Style x:Key="CommentEditorStyle" TargetType="Editor">
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="120" />
+        <Setter Property="TextColor" Value="Black" />
+    </Style>
+
+    <Style x:Key="CommentEdtrStyle" TargetType="Ext:ExtEditor">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="#062755" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="AutoSize" Value="TextChanges" />
+        <Setter Property="Keyboard" Value="Text" />
+        <Setter Property="HeightRequest" Value="100" />
+    </Style>
+
+    <Style x:Key="PassEntryStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Text" />
+        <Setter Property="Placeholder" Value="Password" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="ReturnType" Value="Done" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="IsPassword" Value="True" />
+    </Style>
+
+    <Style x:Key="VinEntryStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Text" />
+        <Setter Property="Placeholder" Value="Vin#" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="ReturnType" Value="Next" />
+    </Style>
+
+    <Style x:Key="ZipEntryStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="Keyboard" Value="Text" />
+        <Setter Property="Placeholder" Value="Zip Code" />
+        <Setter Property="PlaceholderColor" Value="#777777" />
+        <Setter Property="ReturnType" Value="Done" />
+    </Style>
+
+    <Style x:Key="AddFromEntryStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="TextColor" Value="#797979" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Text" />
+        <Setter Property="Placeholder" Value="Address From" />
+        <Setter Property="PlaceholderColor" Value="#797979" />
+        <Setter Property="ReturnType" Value="Next" />
+    </Style>
+
+    <Style x:Key="AddToEntryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="#797979" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Keyboard" Value="Text" />
+        <Setter Property="Placeholder" Value="Address To" />
+        <Setter Property="PlaceholderColor" Value="#797979" />
+        <Setter Property="ReturnType" Value="Done" />
+    </Style>
+
+    <Style x:Key="RangePickerStyle" TargetType="Picker">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="Title" Value="Range km" />
+        <Setter Property="TitleColor" Value="#777777" />
+        <Setter Property="TextColor" Value="#000000" />
+    </Style>
+
+    <Style x:Key="RegBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Sign Up" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="EditTimesheetBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="20,10" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Submit" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="AddRequestBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Send" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="PersonalDetailsBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Done" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="TexDetailsBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Done" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="AccpTaskBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="30,10" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Accept" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="ResetPasswordBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Change My Password" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="PasswordOkBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="OK" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="RegOkBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="OK" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="SinatureBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Accept" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="DrawSinatureBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Submit" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="signatureBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+
+    <Style x:Key="UpdateSSCardBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HeightRequest" Value="30" />
+    </Style>
+
+    <Style x:Key="AccountDetailsBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Done" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="clockBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,10" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="logoutBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,0,0,10" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#f73859" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="ViewAllRecentTimeBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="SignInBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Sign in" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="ForgotSubmitBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="#0b66ea" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Text" Value="Submit" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="timeBtnStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="30" />
+        <!--<Setter Property="WidthRequest" Value="40" />-->
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="TextColor" Value="#f73859" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+    </Style>
+
+    <Style x:Key="ForgotBtnStyle" TargetType="Button">
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="10,0,0,0" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+        <Setter Property="Text" Value="Forgot Password?" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+
+    </Style>
+
+    <Style x:Key="ImgTopLogoStyle" TargetType="Image">
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="Source" Value="iconLogo.png" />
+    </Style>
+
+    <Style x:Key="bgNavigationStyle" TargetType="Image">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="Source" Value="icon_bg_circle.png" />
+    </Style>
+
+    <Style x:Key="BackbtnStyle" TargetType="ImageButton">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="5" />
+        <!--<Setter Property="Aspect" Value="AspectFill" />-->
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="WidthRequest" Value="30" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="Source" Value="icon_back.png" />
+    </Style>
+
+    <Style x:Key="lblHeaderStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="lblRegStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="lblTimesheetStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="lblClockStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="lblTaxDetailsStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="lblResetPasswordStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="lblSignInStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="InitialLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#ffffff" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="WelcomeLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="homeUserLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="homeTimesheetsLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#062755" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="ssCardLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#062755" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="homeHoursLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#062755" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="homePriceLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#f73859" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="End" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="changePasswordLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="passwordPopupLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="RegPopupLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="TimesheetsAddressLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="CaseIDLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#062755" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="TaskNameLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#062755" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="AddRequestCurrencyLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#062755" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="CaseIDValueLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7C889C" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="CurrencyValueLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7C889C" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="TimesheetsTimeLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#7f8b9e" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="TimesheetsPriceLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0f2f5b" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="RequestPriceLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0f2f5b" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="RequestStatusLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="TaskDescLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#7f8b9e" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="GPSLocationLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0f2f5b" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="checkInLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0f2f5b" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="UploadImgLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="CamerablStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0f2f5b" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="OtherblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="TCTitleblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0f2f5b" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="TClblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="{OnPlatform iOS=12, Android=11}" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#7A869A" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+        <Setter Property="LineHeight" Value="1.4" />
+    </Style>
+
+
+    <Style x:Key="uplaodImageLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#0f2f5b" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="jobStartLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="profileMenuLblStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="ViewAllRecentTimeLblStyle" TargetType="Label">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="#0b66ea" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="TextDecorations" Value="Underline" />
+
+    </Style>
+
+    <Style x:Key="ImgNavigateStyle" TargetType="Image">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="HeightRequest" Value="22" />
+        <Setter Property="WidthRequest" Value="22" />
+        <Setter Property="Aspect" Value="AspectFit" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+    </Style>
+
+    <Style x:Key="ImgCloseStyle" TargetType="Image">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="HeightRequest" Value="18" />
+        <Setter Property="WidthRequest" Value="18" />
+        <Setter Property="Aspect" Value="AspectFit" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+    </Style>
+
+    <Style x:Key="txtRegStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="PlaceholderColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="txtAmount" TargetType="Entry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="PlaceholderColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="txtForgotStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="PlaceholderColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="txtTaxDetailsStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="PlaceholderColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="pkTaxDetailsStyle" TargetType="Picker">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="pkStateStyle" TargetType="Picker">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="pkReasonCodeStyle" TargetType="Picker">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="txtSignInStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="txtSearchStyle" TargetType="Ext:ExtEntry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="PlaceholderColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="txtRequestStyle" TargetType="Ext:ExtEntry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="Placeholder" Value="USD" />
+        <Setter Property="PlaceholderColor" Value="#7C889C" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="Keyboard" Value="Numeric" />
+    </Style>
+
+    <Style x:Key="grdSpinerStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BackgroundColor" Value="#80000000" />
+        <Setter Property="ColumnSpacing" Value="0" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="IsVisible" Value="False" />
+        <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="frmSpinerStyle" TargetType="Frame">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="HasShadow" Value="True" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="WidthRequest" Value="40" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+    </Style>
+
+    <Style x:Key="actSpinerStyle" TargetType="ActivityIndicator">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="IsRunning" Value="True" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="WidthRequest" Value="30" />
+        <Setter Property="Color" Value="#0b66ea" />
+    </Style>
+
+    <Style x:Key="FrmBottonMenuStyle" TargetType="Ext:ExtFrame">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="20,0" />
+        <Setter Property="BackgroundColor" Value="#ffffff" />
+        <Setter Property="BorderColor" Value="#ffffff" />
+        <Setter Property="CornerRadius" Value="25,25,0,0" />
+        <Setter Property="HasShadow" Value="True" />
+        <Setter Property="HeightRequest" Value="70" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+    </Style>
+
+    <Style x:Key="GrdBottonMenuStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="ColumnSpacing" Value="0" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="SfHomeViewStyle" TargetType="syncEffectsView:SfEffectsView">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="TouchDownEffects" Value="Ripple" />
+    </Style>
+
+    <Style x:Key="ImgBottomStyle" TargetType="Image">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Aspect" Value="AspectFit" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="WidthRequest" Value="30" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+    </Style>
+
+    <Style x:Key="lblSearchStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="txtTimesheetStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HeightRequest" Value="55" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#002251" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="Keyboard" Value="Numeric" />
+        <Setter Property="MaxLength" Value="5" />
+    </Style>
+
+    <!--#endregion-->
+
+</ResourceDictionary>

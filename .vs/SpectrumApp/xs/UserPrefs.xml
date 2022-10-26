@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{61627704-11B5-4D90-8B35-11012D5B0DA8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SpectrumApp/SpectrumApp/Views/ListPage.xaml">
+    <Files>
+      <File FileName="SpectrumApp/SpectrumApp/Views/ListPage.xaml" Line="15" Column="1" />
+      <File FileName="SpectrumApp/SpectrumApp/Views/HomePage.xaml.cs" />
+      <File FileName="SpectrumApp/SpectrumApp/Views/SignInPage.xaml.cs" Line="41" Column="25" />
+      <File FileName="SpectrumApp/SpectrumApp/Views/InitialScreenPage.xaml.cs" />
+      <File FileName="SpectrumApp/SpectrumApp/Views/HomePage.xaml" />
+      <File FileName="SpectrumApp/SpectrumApp/Views/ListPage.xaml.cs" Line="19" Column="1" />
+      <File FileName="SpectrumApp/SpectrumApp/Views/SignInPage.xaml" Line="235" Column="39" />
+      <File FileName="SpectrumApp/SpectrumApp/obj/Debug/netstandard2.0/App.xaml.g.cs" Line="21" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SpectrumApp" expanded="True">
+            <Node name="SpectrumApp" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="HomePage.xaml" expanded="True" />
+                <Node name="InitialScreenPage.xaml" expanded="True" />
+                <Node name="ListPage.xaml" expanded="True" selected="True" />
+                <Node name="SignInPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SpectrumApp.Android PreferredExecutionTarget="Android.android_pixel" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/divyae/Desktop/SpectrumApp/SpectrumApp/SpectrumApp/Views/SignInPage.xaml.cs" relfile="SpectrumApp/SpectrumApp/Views/SignInPage.xaml.cs" line="41" column="1" />
+      <Breakpoint file="/Users/divyae/Desktop/SpectrumApp/SpectrumApp/SpectrumApp/Views/ListPage.xaml.cs" relfile="SpectrumApp/SpectrumApp/Views/ListPage.xaml.cs" line="55" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SpectrumApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BE76B378-6F8B-43E1-B7F2-7FBE30DE3E78" />
+</Properties>
