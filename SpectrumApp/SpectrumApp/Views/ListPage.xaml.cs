@@ -50,7 +50,7 @@ namespace SpectrumApp.Views
                 var result = await DisplayActionSheet("Sort by (Ascending)", "Cancel", null, new string[] { "Address", "Date" });
                 switch (result)
                 {
-                    case "Name":
+                    case "Address":
                         listViewModel.Timesheets.OrderBy(x => x.Address);
                         BindingContext = listViewModel;
                         break;
